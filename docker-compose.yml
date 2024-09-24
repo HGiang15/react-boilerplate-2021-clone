@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "3001:80"
+    volumes:
+      - ./:/frontend
+      - /frontend/node_modules
