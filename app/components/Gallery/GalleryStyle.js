@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const GallerySection = styled.section`
   padding: 60px 0;
+  overflow: hidden;
 
   /* Ghi đè container default Bootstrap */
   .container {
@@ -89,6 +90,17 @@ export const GallerySection = styled.section`
       }
     }
   }
+
+  .slick-slide img {
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .slick-center img {
+    border: 5px solid #008446;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  }
 `;
 
 export const ImageLink = styled.a`
@@ -101,9 +113,5 @@ export const ImageLink = styled.a`
     display: block;
     margin: 0 auto;
     padding: 0 10px;
-
-    &:hover {
-      transform: scale(1.01);
-    }
   }
 `;

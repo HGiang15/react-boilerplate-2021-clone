@@ -10,9 +10,6 @@ import img7 from 'images/home/gallery/app_07.jpg';
 import img8 from 'images/home/gallery/app_08.jpg';
 import { GallerySection, ImageLink } from './GalleryStyle';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 const Gallery = () => {
   const images = [img1, img2, img3, img4, img5, img6, img7, img8];
 
@@ -26,12 +23,15 @@ const Gallery = () => {
     autoplaySpeed: 2000,
     swipeToSlide: true,
     touchThreshold: 10,
+    centerMode: true,
+    centerPadding: '40px',
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
+          centerPadding: '30px',
         },
       },
       {
@@ -53,6 +53,7 @@ const Gallery = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: '20px',
         },
       },
     ],
